@@ -1,0 +1,79 @@
+.section { border-top: var(--border); border-bottom: var(--border); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  border: var(--border);
+  background: var(--white);
+}
+
+.left {
+  padding: 48px 64px 48px 48px;
+  border-right: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800; line-height: 1.15;
+}
+.titleAccent { color: var(--navy); }
+
+/* Pillars */
+.pillars { display: flex; flex-direction: column; }
+.pillar {
+  display: flex; gap: 20px;
+  padding: 20px 0; border-bottom: 1px solid var(--gray-100);
+}
+.pillar:first-child { padding-top: 0; }
+.pillar:last-child { border-bottom: none; padding-bottom: 0; }
+
+.pillarNum {
+  font-family: var(--font-mono); font-size: .7rem;
+  font-weight: 700; color: var(--gray-400);
+  flex-shrink: 0; padding-top: 3px;
+}
+.pillarTitle {
+  font-size: .95rem; font-weight: 800; color: var(--black);
+  margin-bottom: 6px;
+}
+.pillarDesc { font-size: .85rem; color: var(--gray-600); line-height: 1.65; }
+
+/* Right */
+.imageCol {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--gray-50);
+}
+.image { width: 100%; height: 100%; object-fit: cover; display: block; }
+.imageFallback {
+  display: none; position: absolute; inset: 0;
+  flex-direction: column; align-items: center; justify-content: center;
+  font-size: 2.5rem; text-align: center; gap: 10px;
+}
+.imageFallback p { font-size: .75rem; color: var(--gray-400); font-family: var(--font-mono); }
+.noImg .imageFallback { display: flex; }
+.noImg .image { display: none; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .left { border-right: none; border-bottom: var(--border); padding: 40px 24px; }
+  .imageCol { height: 350px; }
+}

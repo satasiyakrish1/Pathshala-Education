@@ -1,0 +1,46 @@
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--black);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.06s ease, background 0.15s ease;
+}
+
+.ring {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--black);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), border-color 0.15s ease, background 0.15s ease;
+}
+
+/* Hover state: turn into a diamond */
+.dot.hovered {
+  transform: translate(-50%, -50%) scale(1.6);
+  background: var(--yellow-d);
+}
+.ring.hovered {
+  transform: translate(-50%, -50%) scale(1.6) rotate(45deg);
+  border-color: var(--black);
+  background: var(--yellow);
+}
+
+/* Click state */
+.dot.clicked {
+  transform: translate(-50%, -50%) scale(0.6);
+}
+.ring.clicked {
+  transform: translate(-50%, -50%) scale(1.2) rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .dot, .ring {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+.section { border-bottom: var(--border); }
+
+.header { margin-bottom: 56px; }
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800; margin: 14px 0 16px;
+  line-height: 1.1;
+}
+.sub { color: var(--gray-600); font-size: .95rem; max-width: 520px; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border: var(--border);
+}
+
+.card {
+  padding: 36px 32px;
+  border-right: var(--border);
+  transition: background .2s ease;
+  position: relative;
+}
+.card:last-child { border-right: none; }
+.card:hover { background: var(--gray-50); }
+
+.cardHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 28px;
+}
+.cardIcon {
+  font-size: 1.4rem; font-weight: 700;
+  width: 44px; height: 44px;
+  border: var(--border); background: var(--yellow);
+  display: flex; align-items: center; justify-content: center;
+}
+.cardNum { font-size: .65rem; }
+
+.cardTitle { font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; line-height: 1.25; }
+.cardDesc  { font-size: .875rem; color: var(--gray-600); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .card { border-right: none; border-bottom: var(--border); }
+  .card:last-child { border-bottom: none; }
+}

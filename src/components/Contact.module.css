@@ -1,0 +1,83 @@
+.header {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; margin-top: 12px; }
+.sub   { color: var(--gray-600); font-size: .9rem; margin-top: 10px; line-height: 1.6; }
+
+.body {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 64px; align-items: flex-start;
+}
+
+/* Info */
+.infoGrid { display: flex; flex-direction: column; border: var(--border); margin-bottom: 20px; }
+.infoCard {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 20px 24px; border-bottom: var(--border);
+}
+.infoCard:last-child { border-bottom: none; }
+.infoIcon { font-size: 1.2rem; margin-bottom: 2px; }
+.infoVal {
+  font-size: .9rem; font-weight: 700; color: var(--black);
+  text-decoration: none; margin-top: 4px;
+}
+a.infoVal:hover { text-decoration: underline; color: var(--navy); }
+
+.socials { display: flex; flex-direction: column; border: var(--border); }
+.socialLink {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 20px; border-bottom: var(--border);
+  text-decoration: none; color: var(--gray-600);
+  font-family: var(--font-mono); font-size: .7rem; font-weight: 700;
+  letter-spacing: .1em; transition: all .2s ease;
+}
+.socialLink:last-child { border-bottom: none; }
+.socialLink:hover { background: var(--yellow-l); color: var(--black); }
+.socialIcon { font-size: .9rem; }
+
+/* Form */
+.formWrap { border: var(--border); }
+.formHeader {
+  padding: 20px 28px; border-bottom: var(--border);
+  background: var(--gray-50);
+}
+.formHeader h3 { font-size: 1rem; font-weight: 800; }
+
+.form { padding: 28px; display: flex; flex-direction: column; gap: 20px; }
+
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.formGroup { display: flex; flex-direction: column; gap: 6px; }
+.formGroup label {
+  font-family: var(--font-mono); font-size: .65rem;
+  font-weight: 700; letter-spacing: .1em; color: var(--gray-600);
+  text-transform: uppercase;
+}
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%; border: var(--border);
+  background: var(--white);
+  padding: 12px 14px;
+  font-family: var(--font-body); font-size: .875rem; color: var(--black);
+  outline: none; transition: box-shadow .15s ease;
+}
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  box-shadow: 4px 4px 0 0 var(--yellow);
+}
+.formGroup textarea { resize: vertical; min-height: 100px; }
+
+.sent { background: #16a34a !important; }
+
+@media (max-width: 900px) {
+  .header { grid-template-columns: 1fr; }
+  .body   { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .formRow { grid-template-columns: 1fr; }
+}

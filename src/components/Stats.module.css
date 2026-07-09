@@ -1,0 +1,71 @@
+/* Stats big-grid like krishsatasiya */
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 1fr 1fr;
+  border-bottom: var(--border);
+}
+
+/* Each cell is bordered */
+.cell {
+  position: relative; overflow: hidden;
+  border-right: var(--border);
+  aspect-ratio: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 32px;
+  cursor: default;
+}
+.cell:last-child { border-right: none; }
+
+/* Alternating fills */
+.cell:nth-child(1) { background: var(--navy); }
+.cell:nth-child(2) { background: var(--white); }
+.cell:nth-child(3) { background: var(--yellow); }
+.cell:nth-child(4) { background: var(--gray-900); }
+
+.cellInner { position: relative; z-index: 1; text-align: center; }
+
+.num {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900; line-height: 1; letter-spacing: -.04em;
+  display: inline-block;
+}
+.plus { font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 900; }
+
+/* Colors per cell */
+.cell:nth-child(1) .num,
+.cell:nth-child(1) .plus { color: var(--yellow); }
+.cell:nth-child(1) .label { color: rgba(255,255,255,.6); margin-top: 8px; }
+
+.cell:nth-child(2) .num,
+.cell:nth-child(2) .plus { color: var(--navy); }
+.cell:nth-child(2) .label { color: var(--gray-400); margin-top: 8px; }
+
+.cell:nth-child(3) .num,
+.cell:nth-child(3) .plus { color: var(--black); }
+.cell:nth-child(3) .label { color: var(--gray-800); margin-top: 8px; }
+
+.cell:nth-child(4) .num,
+.cell:nth-child(4) .plus { color: var(--yellow); }
+.cell:nth-child(4) .label { color: rgba(255,255,255,.5); margin-top: 8px; }
+
+/* Decorative bg text */
+.bgText {
+  position: absolute; font-size: 7rem; font-weight: 900;
+  opacity: .04; letter-spacing: -.05em; line-height: 1;
+  bottom: 4px; right: 8px;
+  font-family: var(--font-mono);
+  pointer-events: none; user-select: none;
+}
+.cell:nth-child(1) .bgText { color: var(--white); }
+.cell:nth-child(2) .bgText { color: var(--black); }
+.cell:nth-child(3) .bgText { color: var(--black); }
+.cell:nth-child(4) .bgText { color: var(--white); }
+
+@media (max-width: 768px) {
+  .section { grid-template-columns: 1fr 1fr; }
+  .cell { aspect-ratio: auto; padding: 40px 24px; }
+  .cell:nth-child(2) { border-right: none; }
+  .cell:nth-child(3) { border-right: var(--border); border-top: var(--border); }
+  .cell:nth-child(4) { border-top: var(--border); border-right: none; }
+}

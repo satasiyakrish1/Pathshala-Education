@@ -1,0 +1,96 @@
+.page {
+  padding-top: 120px;
+  padding-bottom: 96px;
+  background: var(--white);
+  min-height: 80vh;
+}
+
+.header {
+  margin-bottom: 56px;
+}
+.title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900; margin: 12px 0 16px;
+  letter-spacing: -.03em;
+}
+.sub {
+  color: var(--gray-600); font-size: .975rem; max-width: 580px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: var(--border);
+}
+
+.card {
+  padding: 40px;
+  border-right: var(--border);
+  border-bottom: var(--border);
+  display: flex; flex-direction: column;
+  background: var(--white);
+  transition: background .2s ease;
+}
+/* Grid borders adjustment */
+.grid > div:nth-child(even) {
+  border-right: none;
+}
+.grid > div:nth-child(3),
+.grid > div:nth-child(4) {
+  border-bottom: none;
+}
+
+.card:hover {
+  background: var(--gray-50);
+}
+
+.cardHeader {
+  display: flex; gap: 20px; align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.avatar {
+  width: 60px; height: 60px; border: var(--border);
+  background: var(--yellow-l); display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; flex-shrink: 0;
+}
+
+.name {
+  font-size: 1.25rem; font-weight: 800; color: var(--black); margin-top: 4px;
+}
+.role {
+  font-size: .8rem; font-weight: 600; color: var(--gray-600); margin-top: 2px;
+}
+
+.metaList {
+  display: flex; flex-direction: column; gap: 12px;
+  border-bottom: var(--border); border-top: var(--border);
+  padding: 20px 0; margin-bottom: 20px;
+}
+.metaItem strong {
+  font-family: var(--font-mono); font-size: .65rem; font-weight: 700;
+  color: var(--gray-400); letter-spacing: .08em; display: block; margin-bottom: 2px;
+}
+.metaItem p {
+  font-size: .85rem; font-weight: 600; color: var(--black);
+}
+
+.bio {
+  font-size: .875rem; color: var(--gray-600); line-height: 1.65;
+  margin-bottom: 32px; flex: 1;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    border-right: none !important;
+    border-bottom: var(--border) !important;
+    padding: 32px 20px;
+  }
+  .grid > div:last-child {
+    border-bottom: none !important;
+  }
+}

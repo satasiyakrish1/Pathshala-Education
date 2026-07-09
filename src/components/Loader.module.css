@@ -1,0 +1,134 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Left panel - Navy background */
+.panelLeft {
+  flex: 1.1;
+  height: 100%;
+  background: var(--navy-dark);
+  border-right: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Right panel - Yellow background */
+.panelRight {
+  flex: 0.9;
+  height: 100%;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+}
+.logoImg {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  clip-path: inset(2px);
+  filter: invert(1); /* Invert colors cleanly to show white artwork on black bg */
+  border: none !important;
+  outline: none !important;
+}
+
+.logoFallback {
+  display: none; align-items: center; gap: 8px;
+}
+.logoDot {
+  width: 8px; height: 8px;
+  background: var(--yellow); border: var(--border);
+  flex-shrink: 0;
+}
+.logoText {
+  font-family: var(--font-mono); font-size: .8rem;
+  font-weight: 700; letter-spacing: .05em; color: var(--white);
+}
+.logoEdu  { color: var(--yellow); }
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: .25em;
+  margin-top: 8px;
+}
+
+.counterWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.bigNumber {
+  font-family: var(--font-mono);
+  font-size: clamp(4.5rem, 12vw, 8rem);
+  font-weight: 900;
+  color: var(--navy-dark);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+/* Bottom Progress Bar */
+.bottomBarWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+  border-top: var(--border);
+  z-index: 10;
+}
+.bottomBar {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 0%;
+  background: var(--black);
+}
+
+@media (max-width: 768px) {
+  .loader {
+    flex-direction: column;
+  }
+  .panelLeft {
+    border-right: none;
+    border-bottom: var(--border);
+    flex: 1;
+  }
+  .panelRight {
+    flex: 1;
+  }
+  .logoImg {
+    height: 52px;
+  }
+  .bigNumber {
+    font-size: 5rem;
+  }
+}

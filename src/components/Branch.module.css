@@ -1,0 +1,108 @@
+.page {
+  padding-top: 120px;
+  padding-bottom: 96px;
+  background: var(--white);
+  min-height: 80vh;
+}
+
+.header {
+  margin-bottom: 56px;
+}
+.title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900; margin: 12px 0 16px;
+  letter-spacing: -.03em;
+}
+.sub {
+  color: var(--gray-600); font-size: .975rem; max-width: 580px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: var(--border);
+}
+
+.card {
+  padding: 48px;
+  border-right: var(--border);
+  display: flex; flex-direction: column;
+  background: var(--white);
+  transition: background .2s ease;
+}
+.card:last-child {
+  border-right: none;
+}
+.card:hover {
+  background: var(--gray-50);
+}
+
+.cardHeader {
+  margin-bottom: 32px;
+}
+.tag {
+  background: var(--yellow);
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.branchName {
+  font-size: 1.6rem; font-weight: 900; color: var(--black);
+}
+
+.infoList {
+  display: flex; flex-direction: column; gap: 20px;
+  border-bottom: var(--border);
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+.infoItem {
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.icon {
+  font-size: 1.25rem; flex-shrink: 0; margin-top: 2px;
+}
+.infoItem strong {
+  font-family: var(--font-mono); font-size: .65rem; font-weight: 700;
+  color: var(--gray-400); letter-spacing: .08em; display: block; margin-bottom: 2px;
+}
+.infoItem p, .infoItem a {
+  font-size: .9rem; color: var(--black); font-weight: 600; text-decoration: none;
+}
+.infoItem a:hover {
+  color: var(--navy); text-decoration: underline;
+}
+
+.amenities {
+  margin-bottom: 40px; flex: 1;
+}
+.featureList {
+  list-style: none; margin-top: 14px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.featureItem {
+  display: flex; align-items: center; gap: 10px;
+  font-size: .85rem; font-weight: 500; color: var(--gray-800);
+}
+.dot {
+  width: 6px; height: 6px; background: var(--yellow); border: 1px solid var(--black);
+  flex-shrink: 0;
+}
+
+.mapBtn {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    border-right: none;
+    border-bottom: var(--border);
+    padding: 36px 24px;
+  }
+  .card:last-child {
+    border-bottom: none;
+  }
+}

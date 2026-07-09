@@ -1,0 +1,242 @@
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--white);
+  background-image: radial-gradient(var(--black) 1px, transparent 0);
+  background-size: 24px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: 8px 8px 0 0 #000;
+  padding: 30px 24px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.avatarWrapper {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  border: var(--border);
+  box-shadow: 4px 4px 0 0 #000;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--yellow);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0 auto;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: var(--border);
+  box-shadow: 3px 3px 0 0 #000;
+  background: var(--white);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.socialIcon:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 0 #000;
+  background: var(--yellow);
+}
+
+.linksGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border: var(--border);
+  box-shadow: 4px 4px 0 0 #000;
+  background: var(--btn-bg, var(--white));
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.linkCard:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 0 #000;
+  background: var(--yellow);
+}
+
+.linkIcon {
+  font-size: 1.3rem;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.linkLabel {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.branchesSection {
+  width: 100%;
+  margin-bottom: 30px;
+  border-top: 2px dashed #000;
+  padding-top: 24px;
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.branchCard {
+  background: var(--white);
+  border: var(--border);
+  box-shadow: 4px 4px 0 0 #000;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.branchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.branchName {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 750;
+  color: var(--black);
+}
+
+.branchTag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: var(--yellow);
+  color: var(--black);
+  border: 1.5px solid #000;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.branchAddress {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.branchMapBtn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--black);
+  border: var(--border);
+  padding: 6px 12px;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 0 var(--yellow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.branchMapBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 var(--yellow);
+}
+
+.footer {
+  text-align: center;
+  border-top: 2px dashed #ccc;
+  width: 100%;
+  padding-top: 20px;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.devBy a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.devBy a:hover {
+  text-decoration: underline;
+}
