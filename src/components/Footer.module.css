@@ -74,9 +74,10 @@
 }
 
 @media (max-width: 900px) {
-  .innerFull { grid-template-columns: 1fr 1fr; }
+  .innerFull { grid-template-columns: 1fr 1fr; padding: 64px 32px; }
+  .bottomInner { padding: 18px 32px; }
 }
 @media (max-width: 600px) {
-  .innerFull { grid-template-columns: 1fr; }
-  .bottomInner { flex-direction: column; gap: 8px; text-align: center; }
+  .innerFull { grid-template-columns: 1fr; padding: 48px 20px; }
+  .bottomInner { flex-direction: column; gap: 8px; text-align: center; padding: 18px 20px; }
 }

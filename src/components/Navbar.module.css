@@ -87,5 +87,5 @@
 @media (max-width: 768px) {
   .navLinks, .navCta { display: none; }
   .hamburger { display: flex; }
-  .inner { gap: 0; justify-content: space-between; }
+  .innerFull { gap: 0; justify-content: space-between; padding: 0 20px; }
 }

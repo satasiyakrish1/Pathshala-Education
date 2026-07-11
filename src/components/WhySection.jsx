@@ -31,8 +31,7 @@ export default function WhySection() {
         <div className={styles.header} ref={titleRef}>
           <span className="label">— WHAT WE OFFER</span>
           <h2 className={styles.title}>
-            Strategic Education<br />
-            for Your Next Goal
+            Strategic Education for Your Next Goal
           </h2>
           <p className={styles.sub}>High-impact academic solutions balancing quality, depth, and personalisation — without the corporate overhead.</p>
         </div>

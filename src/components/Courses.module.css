@@ -70,4 +70,4 @@
 .featured .price { color: var(--yellow); }
 
 @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .card { border-right: none; border-bottom: var(--border); } .card:last-child { border-bottom: none; } }
-@media (max-width: 600px) { .header { flex-direction: column; align-items: flex-start; gap: 20px; } }
+@media (max-width: 600px) { .header { flex-direction: column; align-items: flex-start; gap: 20px; } .viewAll { align-self: flex-start; } }
