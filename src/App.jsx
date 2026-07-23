@@ -19,6 +19,8 @@ import NotFound   from './components/NotFound'
 import Loader     from './components/Loader'
 import CustomCursor from './components/CustomCursor'
 import Linktree   from './components/Linktree'
+import Success    from './components/Success'
+import Gallery    from './components/Gallery'
 
 export default function App() {
   const hash = useRoute()
@@ -77,6 +79,8 @@ export default function App() {
     if (hash === '#/faq')     return <FAQ />
     if (hash === '#/faculty') return <Faculty />
     if (hash === '#/linktree') return <Linktree />
+    if (hash === '#/success') return <Success />
+    if (hash === '#/gallery') return <Gallery />
 
     // Handle home anchor links like /#about or #about
     if (hash.startsWith('/#') || (hash.startsWith('#') && !hash.startsWith('#/'))) {

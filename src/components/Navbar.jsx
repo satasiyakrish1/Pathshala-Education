@@ -8,6 +8,8 @@ const links = [
   ['/#courses', 'Courses'],
   ['#/branch', 'Branches'],
   ['#/faculty', 'Faculty'],
+  ['#/success', 'Success'],
+  ['#/gallery', 'Gallery'],
   ['#/faq', 'FAQ'],
   ['/#contact', 'Contact'],
 ]

@@ -50,8 +50,8 @@
   width: auto;
   object-fit: contain;
   mix-blend-mode: screen;
-  clip-path: inset(2px);
-  filter: invert(1); /* Invert colors cleanly to show white artwork on black bg */
+  filter: invert(1);
+  clip-path: inset(4px);
   border: none !important;
   outline: none !important;
 }
@@ -95,23 +95,7 @@
   letter-spacing: -.05em;
 }
 
-/* Bottom Progress Bar */
-.bottomBarWrap {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 12px;
-  background: transparent;
-  border-top: var(--border);
-  z-index: 10;
-}
-.bottomBar {
-  position: absolute;
-  top: 0; left: 0; bottom: 0;
-  width: 0%;
-  background: var(--black);
-}
+
 
 @media (max-width: 768px) {
   .loader {
